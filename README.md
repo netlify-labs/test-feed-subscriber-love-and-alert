@@ -1,3 +1,6 @@
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c974c7c4-c6df-44da-832b-50394a9ecd41/deploy-status)](https://app.netlify.com/sites/love-for/deploys)
+
 # Love for Netlify. A subscription tester.
 
 https://love-for.netlify.com
