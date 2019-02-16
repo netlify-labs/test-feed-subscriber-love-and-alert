@@ -1,0 +1,19 @@
+[
+  {
+    "title": "An important announcement",
+    "pubDate": "Fri Feb 15 2019 13:10:05 GMT+0000 (GMT)",
+    "expDate": "Sun Feb 17 2019 12:10:05 GMT+0000 (GMT)",
+    "text": "There are <a href='/'>things</a> afoot"
+  },
+  {
+    "title": "An important announcements",
+    "pubDate": "Wed May 15 2019 14:10:05 GMT+0100 (BST)",
+    "expDate": "Fri May 17 2019 13:10:05 GMT+0100 (BST)",
+    "text": ""
+  },
+  {
+    "title": "Another important announcement",
+    "pubDate": "Fri Mar 15 2019 13:10:05 GMT+0000 (GMT)",
+    "expDate": "Sun Mar 17 2019 12:10:05 GMT+0000 (GMT)",
+    "text": ""
+  }]

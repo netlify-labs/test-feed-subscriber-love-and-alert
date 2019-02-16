@@ -1,59 +1,55 @@
 ---
-title: EleventyOne
-subtitle: A project scaffold for getting building with Eleventy quickly.
+title: Test Feed Subscriber
 layout: layouts/base.njk
 ---
 
 
-## This site is a starting point
+## Data from external feeds
 
-From this point we should already have:
+This site subscribes to updates of the data hosted at:
 
-- [Eleventy](https://11ty.io) with a skeleton site
-- A date format filter for Nunjucks
-- A tiny inline Sass pipeline
-- A tiny inline JS pipeline. (<a href="#" class="btn-log">Test a console.log message</a>)
-- JS [search index](/search.json) generator
-- Serverless (FaaS) development pipeline with Netlify Functions for Lambda
+```
+https://data-feeds.netlify.com/
+```
+
+It was last deployed, most likely due to an update in a [data source](https://data-feeds.netlify.com), at <time>`{{ site.buildTime | dateDisplay('HH:mm') }} on {{ site.buildTime | dateDisplay('DDD') }}`</time>
 
 
-## Post pages
+## We can see the latest announcements
 
-The pages found in in the posts
-
-<ul class="listing">
-{%- for page in collections.post -%}
-  <li>
-    <a href="{{ page.url }}">{{ page.data.title }}</a> -
-    <time datetime="{{ page.date }}">{{ page.date | dateDisplay("LLL d, y") }}</time>
-  </li>
+<ul>
+{% for item in breaking.slice(0,5) -%}
+<li><b>{{ item.title }}</b> - {{ item.text | safe }}</li>
 {%- endfor -%}
 </ul>
 
-## Links from an external data source
 
-These links were sourced from [hawksworx.com](https://www.hawksworx.com/feed.json) at build time.
+## Some Twitter Love
 
 <ul class="listing">
-{%- for item in hawksworx.entries.slice(0,5) -%}
+{%- for item in love.slice(0,5) -%}
   <li>
-    <a href="{{ item.link }}">{{ item.title }}</a>
+    <a href="">{{ item.text }}</a>
   </li>
 {%- endfor -%}
 </ul>
 
 
-The data can be stashed locally by running:
+## And upcoming events
 
-```
-yarn run seed
-```
+<ul class="listing">
+{%- for item in events.future -%}
+  <li>
+    <a href="{{ item.eventURL }}">{{ item.eventName }}</a> - {{ item.name}}
+  </li>
+{%- endfor -%}
+</ul>
 
-It will then be available locally for building with:
 
-```
-yarn start
-```
+
+
+
+
 
 
 
