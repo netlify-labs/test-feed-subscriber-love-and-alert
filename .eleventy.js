@@ -33,7 +33,7 @@ module.exports = function(config) {
       data: `_data/${env}`
     },
     templateFormats : ["njk", "md"],
-    htmlTemplateEngine : ["njk","md"],
+    htmlTemplateEngine : ["njk"],
     markdownTemplateEngine : "njk",
     passthroughFileCopy: true
   };

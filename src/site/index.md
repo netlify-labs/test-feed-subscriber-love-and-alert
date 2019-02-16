@@ -24,7 +24,7 @@ It was last deployed, most likely due to an update in a [data source](https://da
 </ul>
 
 
-## Some Twitter Love
+## Some Recent Twitter Love
 
 <ul class="listing">
 {%- for item in love.slice(0,5) -%}
@@ -40,7 +40,7 @@ It was last deployed, most likely due to an update in a [data source](https://da
 <ul class="listing">
 {%- for item in events.future -%}
   <li>
-    <a href="{{ item.eventURL }}">{{ item.eventName }}</a> - {{ item.name}}
+    <a href="{{ item.eventUrl }}">{{ item.eventName }}</a> - {{ item.name}}
   </li>
 {%- endfor -%}
 </ul>
