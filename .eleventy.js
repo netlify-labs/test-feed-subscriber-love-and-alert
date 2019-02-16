@@ -9,13 +9,16 @@ module.exports = function(config) {
   // Layout aliases can make templates more portable
   config.addLayoutAlias('default', 'layouts/base.njk');
 
-  // Add some utiliuty filters
-  config.addFilter("squash", require("./src/filters/squash.js") );
+  // Add some utility filters
   config.addFilter("dateDisplay", (dateObj, format = "LLL d, y") => {
     return DateTime.fromJSDate(dateObj, {
       zone: "utc"
     }).toFormat(format);
   });
+  config.addFilter("before", function(string, index) {
+    return string.split(index)[0];
+  });
+
 
   // minify the html output
   config.addTransform("htmlmin", require("./src/utils/minify-html.js"));

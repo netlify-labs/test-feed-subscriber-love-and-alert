@@ -1,0 +1,23 @@
+---
+title: NetlifyLove
+layout: layouts/base.njk
+---
+
+{%- set item = love | random -%}
+<div class="tweet">
+  <div class="tweet-text">
+  {{ item.text }}
+  </div>
+  <div class="tweet-attribution">
+    — <a href="{{ item.url }}" target="_BLANK" rel="noopener">{{ item.name }}</a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

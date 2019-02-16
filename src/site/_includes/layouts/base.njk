@@ -7,11 +7,20 @@
     <title>{{ title }}</title>
   </head>
   <body >
+    <div class="banner">
+      {% if breaking.length %}
+      {% set item = breaking | first %}
+      <span class="announcement-title">{{ item.title }}</span> - {{ item.text | safe }}
+      {% endif %}
+    </div>
     <div class="container">
+      <img src="/images/heart.png" alt="Feel the love" class="heart">
       <h1>{{ title }}</h1>
-      {%- if subtitle %}<p class="subtitle">{{ subtitle }}</p>{% endif %}
       {{ content | safe }}
     </div>
+    {# <script>
+      const love = {{ love | dump }};
+    </script> #}
   </body>
 </html>
 

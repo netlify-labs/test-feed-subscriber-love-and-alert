@@ -35,10 +35,30 @@ body {
   }
 }
 
+.banner {
+  text-align: left;
+  padding: 0.4em 2em;
+  background-color: $accent-color;
+  color: mix($page-color, $accent-color, 80%);
+
+  a:link,
+  a:visited {
+    color: $page-color;
+    text-decoration: none;
+    border-bottom: solid 1px mix($accent-color, $page-color, 50%);
+  }
+  a:hover,
+  a:focus {
+    color: $page-color;
+    border-bottom: solid 2px $page-color;
+  }
+
+}
 
 .container {
   margin-left: auto;
   margin-right: auto;
+  padding-top: 5em;
   width: 90%;
   text-align: left;
   @include bp(mid) {
@@ -58,9 +78,9 @@ h1, h2, h3 {
   line-height: 1;
 }
 h1 {
+  display: inline-block;
   font-size: 2.2em;
   line-height: 1;
-
   @include bp(mid) {
     font-size: 3em;
   }
@@ -69,14 +89,47 @@ h1 {
   }
 }
 
+.heart {
+  display: inline-block;
+  width: 2rem;
+  padding-right: 0.4rem;
+  @include bp(mid) {
+    width: 2.8rem;
+  }
+  @include bp(wide) {
+    width: 3.4rem;
+  }
+}
+
 p {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
-ul, ol {
-  padding-left: 1em;
+.tweet {
+  border: dashed 6px $accent-color;
+  border-radius: 1em;
+  padding: 3em;
+  margin-top:1em;
+  font-size: 1.2em;
+  @include bp(mid) {
+    font-size: 1.4em;
+  }
+  @include bp(wide) {
+    font-size: 1.5em;
+  }
 }
+
+.tweet-text {
+  line-height: 1.4;
+}
+
+.tweet-attribution {
+  text-align:right;
+  margin-top:1em;
+  font-size: 0.8em;
+}
+
 
 a:link,
 a:visited {
@@ -94,67 +147,9 @@ time {
   white-space: nowrap;
 }
 
-.list-item-date {
-  font-size: 0.8em;
-  font-style: italic;
-  display:block;
-}
-
-
-code {
-  font-size: 0.8em;
-  background-color:  mix($accent-color, $page-color, 20%);
-  color: $text-color;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 6px;
-  padding-right: 6px;
-  white-space: nowrap;
-}
-
 .date {
   font-size: 0.8em;
   font-style: italic;
 }
 
 
-pre {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: 2em;
-  padding-right: 2em;
-  line-height: 1.2;
-  background-color:  mix($accent-color, $page-color, 10%);
-  border: solid 1px mix($accent-color, $page-color, 30%);
-  overflow: auto;
-  code {
-    border-style: none;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-
-footer {
-  margin-top: 6em;
-  padding-top: 4em;
-  padding-bottom: 6em;
-  border-top: solid 1px mix($text-color, $page-color, 10%);
-  font-size: 0.7em;
-  color: mix($text-color, $page-color, 40%);
-
-  a:link,
-  a:visited {
-    color: mix($text-color, $page-color, 70%);
-    border-bottom: solid 1px mix($accent-color, $page-color, 70%);
-  }
-  a:hover,
-  a:focus {
-    color: $accent-color;
-    border-bottom: solid 1px $text-color;
-  }
-}
