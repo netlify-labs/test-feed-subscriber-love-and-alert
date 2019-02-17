@@ -13,6 +13,7 @@ require('require-dir')('./gulp-tasks');
 */
 gulp.task("watch", function() {
   gulp.watch('./src/scss/**/*.scss', gulp.parallel('css'));
+  gulp.watch('./src/js/**/*.js', gulp.parallel('js'));
 });
 
 
@@ -20,7 +21,8 @@ gulp.task("watch", function() {
   Let's build this sucker.
 */
 gulp.task('build', gulp.parallel(
-  'css'
+  'css',
+  'js'
 ));
 
 /*

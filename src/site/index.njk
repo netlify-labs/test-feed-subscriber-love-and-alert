@@ -3,7 +3,7 @@ title: NetlifyLove
 layout: layouts/base.njk
 ---
 
-{%- set item = love | random -%}
+{%- set item = love | first -%}
 <div class="tweet">
   <div class="tweet-text">
   {{ item.text }}
@@ -12,12 +12,4 @@ layout: layouts/base.njk
     — <a href="{{ item.url }}" target="_BLANK" rel="noopener">{{ item.name }}</a>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
+<a href="https://twitter.com/netlifylove" class="btn-more-love">More love</a>
