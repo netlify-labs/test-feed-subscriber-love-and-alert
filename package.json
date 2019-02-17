@@ -1,7 +1,7 @@
 {
-  "name": "EleventyOne",
+  "name": "Love-and-alerts",
   "version": "2.0.0",
-  "description": "A project bootstrap for Eleventy sites. With pipelines for Sass, Js, and Lambdas",
+  "description": "A site to share some love for Netlify. And to demo a subscription model",
   "author": "Phil Hawksworth",
   "license": "MIT",
   "scripts": {
@@ -17,7 +17,6 @@
   "dependencies": {
     "@11ty/eleventy": "^0.7.1",
     "axios": "^0.18.0",
-    "concurrent-transform": "^1.0.0",
     "dotenv": "^6.2.0",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
@@ -27,8 +26,7 @@
     "html-minifier": "^3.5.21",
     "luxon": "^1.11.1",
     "netlify-lambda": "^1.3.1",
-    "require-dir": "^1.0.0",
-    "xml2js": "^0.4.19"
+    "require-dir": "^1.0.0"
   },
   "resolutions": {
     "terser": "3.14.*"
