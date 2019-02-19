@@ -10,7 +10,7 @@
     {% if breaking.length %}
     <div class="banner">
       {% set item = breaking | first %}
-      <span class="announcement-title">{{ item.title }}</span> - {{ item.text | safe }}
+      <span class="announcement-title">{{ item.title }}</span> - {{ item.content | safe }}
     </div>
     {% endif %}
     <div class="container">
